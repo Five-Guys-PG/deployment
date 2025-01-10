@@ -20,3 +20,6 @@ services:
         reservations:
           cpus: '0.25'
           memory: 256M
+networks:
+    admin-mysql_default:
+      external: true
