@@ -8,6 +8,8 @@ services:
       DB_SERVER: admin-mysql_db
       DB_NAME: BE_192441
       DB_USER: root
+    networks:
+      - admin-mysql_default
     env_file:
       - .env
     deploy:
