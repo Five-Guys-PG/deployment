@@ -1,13 +1,20 @@
 services:
   prestashop:
     image: vitalii318/pixel-shop-clone
-    restart: always
+    restart: unless-stopped
     ports:
-      - 8080:80
       - 8083:443
     environment:
-      DB_SERVER: localhost
-      DB_NAME: prestashop
+      DB_SERVER: admin-mysql_db
+      DB_NAME: BE_192441
       DB_USER: root
     env_file:
       - .env
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 256M
+        reservations:
+          cpus: '0.25'
+          memory: 256M
