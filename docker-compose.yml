@@ -3,7 +3,7 @@ services:
     image: vitalii318/pixel-shop-clone
     restart: unless-stopped
     ports:
-      - 8083:443
+      - 19244:443
     environment:
       DB_SERVER: admin-mysql_db
       DB_NAME: BE_192441
